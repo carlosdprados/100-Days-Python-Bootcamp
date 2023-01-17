@@ -23,6 +23,6 @@ pet = input("What's your pet's name?\n").lower().replace(" ","")
 pet_length = len(pet)
 if pet_length & 1:
   pet_length = pet_length + 1
-
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Concatenating the left half of the city name and the right half of the pet name.
 print("\nYour cool band name shall be " + city[:city_length//2] + pet[pet_length//2:])
