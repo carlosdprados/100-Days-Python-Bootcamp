@@ -147,7 +147,7 @@ while keep_playing_flag == 1:
     win_rate = float(50)
   else:
     win_rate = float(number_wins/(number_games-number_draw)*100)
-  print(f"Your win rate is: {win_rate}%.\n")
+  print(f"\nYou have played {number_games} times and your win rate is: {win_rate}%.\n")
   while True:
     try:
       keep_playing=input('Do you want to keep playing? Press Y/N').lower()
@@ -156,16 +156,15 @@ while keep_playing_flag == 1:
       print("Please enter a valid response.\n")
   if keep_playing == "n" and win_rate <= 50:
     print("Giving up won't take you anywhere.\n\nGAME OVER")
-    keep_playing_flag == 0
+    keep_playing_flag = 0
   elif keep_playing == "n" and win_rate > 50:
     print("Well done, sir. You managed to beat me. GGs.\n\nTHANK YOU FOR PLAYING!!")
-    keep_playing_flag == 0
+    keep_playing_flag = 0
   elif keep_playing != "y" and win_rate <= 50:
     print("You had your chance to type a valid answer. Now get out of my sight.\n\nGAME OVER")
-    keep_playing_flag == 0
+    keep_playing_flag = 0
   elif keep_playing != "y" and win_rate > 50:
     print("You had your chance to type a valid answer. Now get out of my sight.\n\nCongrats on beating me, BTW.")
-    keep_playing_flag == 0
+    keep_playing_flag = 0
   else:
     print("Let's do it.\n")
-#Future modifications: Implementing loops and lists to store previous user choices so the machine adjusts the 'a' and 'b' ranges for making it harder for the user to win (Artificial Intelligence).
